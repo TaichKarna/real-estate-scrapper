@@ -1,0 +1,23 @@
+{
+  "name": "@real-estate-scrapper/auth",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@better-auth/core": "1.7.7",
+    "@better-auth/drizzle-adapter": "1.7.7",
+    "@real-estate-scrapper/db": "*",
+    "better-auth": "1.7.7",
+    "drizzle-orm": "1.0.0-rc.4",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "typescript": "^6.0.3"
+  }
+}

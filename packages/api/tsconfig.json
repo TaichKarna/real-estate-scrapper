@@ -1,0 +1,6 @@
+{
+  "extends": "@real-estate-scrapper/config/tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

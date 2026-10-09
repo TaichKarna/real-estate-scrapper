@@ -1,0 +1,22 @@
+{
+  "name": "@real-estate-scrapper/api",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@real-estate-scrapper/auth": "*",
+    "@real-estate-scrapper/db": "*",
+    "@trpc/client": "^11.18.0",
+    "@trpc/server": "^11.18.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "typescript": "^6.0.3"
+  }
+}

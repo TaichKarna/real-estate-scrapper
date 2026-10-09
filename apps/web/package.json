@@ -1,0 +1,48 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "serve": "vp preview",
+    "start": "vp dev",
+    "check-types": "vp build && tsc --noEmit",
+    "env:generate": "varlock codegen"
+  },
+  "dependencies": {
+    "@real-estate-scrapper/api": "*",
+    "@real-estate-scrapper/ui": "*",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/react-form": "^1.33.5",
+    "@tanstack/react-query": "^5.102.8",
+    "@tanstack/react-router": "^1.170.32",
+    "@trpc/client": "^11.18.0",
+    "@trpc/server": "^11.18.0",
+    "@trpc/tanstack-react-query": "^11.18.0",
+    "@varlock/vite-integration": "1.5.1",
+    "better-auth": "1.7.7",
+    "lucide-react": "^1.41.0",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sonner": "^2.0.8",
+    "varlock": "1.18.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "@tanstack/react-query-devtools": "^5.102.8",
+    "@tanstack/react-router-devtools": "^1.167.1",
+    "@tanstack/router-plugin": "^1.168.35",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,0 +1,28 @@
+// Better-T-Stack project metadata
+//
+// Keep this file to use the `add` command.
+// Add addons: npx create-better-t-stack@latest add
+//
+// Docs: https://better-t-stack.dev/docs
+// Stack Builder: https://better-t-stack.dev/new
+
+{
+  "$schema": "https://r2.better-t-stack.dev/schema.json",
+  "version": "3.44.3",
+  "createdAt": "2026-10-09T15:51:00.485Z",
+  "reproducibleCommand": "npx create-better-t-stack@latest . --frontend tanstack-router --backend elysia --runtime node --database sqlite --orm drizzle --api trpc --auth better-auth --payments none --addons vite-plus --examples none --db-setup none --web-deploy vercel --server-deploy vercel --git --package-manager npm --install",
+  "database": "sqlite",
+  "orm": "drizzle",
+  "backend": "elysia",
+  "runtime": "node",
+  "frontend": ["tanstack-router"],
+  "addons": ["vite-plus"],
+  "examples": [],
+  "auth": "better-auth",
+  "payments": "none",
+  "packageManager": "npm",
+  "dbSetup": "none",
+  "api": "trpc",
+  "webDeploy": "vercel",
+  "serverDeploy": "vercel",
+}

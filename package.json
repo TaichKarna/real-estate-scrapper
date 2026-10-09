@@ -1,0 +1,59 @@
+{
+  "name": "real-estate-scrapper",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vp run -r dev",
+    "build": "vp run -r build",
+    "check-types": "vp run -r check-types",
+    "check": "vp check && vp run -r check-types",
+    "lint": "vp lint",
+    "format": "vp fmt",
+    "staged": "vp staged",
+    "hooks:setup": "vp config",
+    "dev:web": "vp run --filter web dev",
+    "dev:server": "vp run --filter server dev",
+    "db:push": "vp run --filter @real-estate-scrapper/db db:push",
+    "db:studio": "vp run --filter @real-estate-scrapper/db db:studio",
+    "db:generate": "vp run --filter @real-estate-scrapper/db db:generate",
+    "db:migrate": "vp run --filter @real-estate-scrapper/db db:migrate",
+    "db:local": "vp run --filter @real-estate-scrapper/db db:local",
+    "deploy:setup": "npx --yes vercel link",
+    "dev:vercel": "npx --yes vercel dev -L",
+    "env:preview": "tsx scripts/sync-vercel-env.ts preview",
+    "env:production": "tsx scripts/sync-vercel-env.ts production",
+    "deploy": "npx --yes vercel deploy",
+    "deploy:prod": "npx --yes vercel deploy --prod",
+    "deploy:check": "npx --yes vercel deploy --dry",
+    "env:generate": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
+    "postinstall": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
+    "auth:generate": "cd apps/server && npm run auth:generate"
+  },
+  "dependencies": {
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "@types/node": "^26.4.1",
+    "rolldown": "1.2.7",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "varlock": "1.18.0",
+    "vite-plus": "0.3.1"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.3.1"
+  },
+  "packageManager": "npm@11.20.0",
+  "allowScripts": {
+    "esbuild": true,
+    "sharp": true
+  },
+  "varlock": {
+    "loadPath": "./apps/server/"
+  }
+}
