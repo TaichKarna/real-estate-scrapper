@@ -56,3 +56,8 @@ coverage
 .cache
 tmp
 temp
+
+# Scraper sessions / browser profiles / recon dumps (contain cookies)
+.auth/
+**/.auth/
+.recon/

@@ -13,6 +13,7 @@
     "@real-estate-scrapper/db": "*",
     "@trpc/client": "^11.18.0",
     "@trpc/server": "^11.18.0",
+    "xlsx": "^0.18.5",
     "zod": "^4.5.4"
   },
   "devDependencies": {

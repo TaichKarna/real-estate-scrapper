@@ -1,0 +1,25 @@
+{
+  "name": "worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "check-types": "tsc --noEmit",
+    "scrape": "tsx src/cli.ts",
+    "jd:login": "tsx -e \"import { runJustdialInteractiveLogin } from '@real-estate-scrapper/scraper'; runJustdialInteractiveLogin();\""
+  },
+  "dependencies": {
+    "@real-estate-scrapper/db": "*",
+    "@real-estate-scrapper/scraper": "*",
+    "varlock": "1.18.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "@types/node": "^26.4.1",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@real-estate-scrapper/scraper",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@real-estate-scrapper/db": "*",
+    "playwright": "^1.49.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@real-estate-scrapper/config": "*",
+    "@types/node": "^26.4.1",
+    "typescript": "^6.0.3"
+  }
+}

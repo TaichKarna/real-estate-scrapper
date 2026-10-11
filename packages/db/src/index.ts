@@ -9,7 +9,18 @@ export function createDb(env: DatabaseConfig) {
     url: env.DATABASE_URL,
   });
 
+  if (env.DATABASE_URL.startsWith("file:")) {
+    client.execute("PRAGMA journal_mode = WAL;").catch(() => {});
+    client.execute("PRAGMA busy_timeout = 30000;").catch(() => {});
+  }
+
   return drizzle({ client, relations });
 }
 
 export type Database = ReturnType<typeof createDb>;
+export * from "./schema";
+
+
+
+
+
